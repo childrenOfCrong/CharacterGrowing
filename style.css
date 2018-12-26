@@ -1,0 +1,15 @@
+body {
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+    background: white;
+    width: 4rem;
+}
+.test{
+    height: 4rem;
+}
+#go{
+    height: 2rem;
+    cursor: pointer;
+    text-align: center;
+}

@@ -1,0 +1,14 @@
+{
+    "name": "Hello Extensions",
+    "description" : "Base Level Extension",
+    "permissions": ["storage"],
+    "version": "1.0",
+    "manifest_version": 2,
+    "browser_action": {
+      "default_popup": "newtab.html"
+    },
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    }
+}
