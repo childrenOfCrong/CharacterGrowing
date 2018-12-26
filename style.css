@@ -3,7 +3,8 @@ body {
     margin: 0px;
     padding: 0px;
     background: white;
-    width: 4rem;
+    width: 15rem;
+    height: 25rem;
 }
 .test{
     height: 4rem;
@@ -12,4 +13,26 @@ body {
     height: 2rem;
     cursor: pointer;
     text-align: center;
+}
+.image_wrapper{
+    display: flex;
+}
+#first{
+    font-size: 13px;
+}
+#first .image_wrapper{
+    padding: 10px 0 10px;
+}
+#first .name_wrapper{
+    padding-bottom: 10px;
+    display: flex;
+}
+#first .name_wrapper .name{
+    font-size: 13px;
+    margin-right: 8px;
+}
+#first img{
+    width: 33.3%;
+    cursor: pointer;
+    border: 1px solid #ddd;
 }
