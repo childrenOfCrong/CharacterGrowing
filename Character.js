@@ -72,22 +72,26 @@ const Character = class {
   console.log('created');
   }
   poop(){
+    const cleanSheet = document.querySelector('#cleanSheet');
     const poopTimerID = setInterval(()=>{
-      const shit = document.createElement('img')
-      shit.setAttribute('src', '')
-     document.body.appendChild(shit)
-     this.decreasClean()
-     this.timerIDList.push(poopTimerID)
-   }, 10000) 
+      this.makeShit();
+      this.decreaseClean();
+      this.timerIDList.push(poopTimerID);
+    }, 5000) 
   }
   makeShit(){
-    
+    const shit = document.createElement('img');
+    const right = Math.random() * 6 - 2;
+    shit.setAttribute('src', './images/shit.png');
+    shit.setAttribute('class', 'shit');
+    shit.setAttribute('style', `right: ${right}rem`);
+    document.body.appendChild(shit);
   }
-  decreasClean(){
+  decreaseClean(){
     this.clean -=50;
-   const cleanEl = document.querySelector('#clean')
-   cleanEl.style.width = `${this.clean}%`;
-     if(this.clean<=0)this.die()
+    const cleanEl = document.querySelector('#clean')
+    cleanEl.style.width = `${this.clean}%`;
+    if(this.clean<=0)this.die()
   }
   die(){
     this.timerIDList.forEach(timerId=>clearInterval(timerId))
