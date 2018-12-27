@@ -122,3 +122,9 @@ li {
 .none {
   display: none;
 }
+
+.deer {
+  width: 120px;
+  position: absolute;
+  bottom: 30px;
+}
