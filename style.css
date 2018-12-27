@@ -64,6 +64,19 @@ body {
     text-align: center;
 }
 
+.playgroundCopy {
+    width : 320px;
+    height :295px;
+    position: absolute;
+    top: 60px;
+    transition: all 1.5s;
+}
+
+.sleep {
+    background: #000;
+    opacity: 0.9;    
+}
+
 .bob {
   width: 80px;
   position: absolute;
