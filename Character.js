@@ -44,6 +44,29 @@ const Character = class {
   }
   eat(){
     console.log('eat');
+    const bob = document.createElement('img')
+    bob.setAttribute('src', './images/eat.png')
+    bob.setAttribute('class', 'bob')
+    document.body.appendChild(bob)
+    this.eating(bob)
+  }
+  setFullSeti(){
+    console.log('full')
+    this.satiety = 100;
+     const satisEl = document.querySelector('#satiety');
+      satisEl.style.width = `${this.satiety}%`;
+  }
+  eating(bob){
+    let opacity = 1;
+    const eatingBob = ()=>{
+     bob.style.opacity = opacity;
+     opacity -=0.003;
+      if(opacity>0){
+        requestAnimationFrame(eatingBob);
+      }
+      else this.setFullSeti();
+    }
+    eatingBob();
   }
   sleep(){
   console.log('created');
