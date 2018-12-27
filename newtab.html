@@ -7,33 +7,33 @@
     <link rel="stylesheet" href="./style.css">
   </head>
   <body>
+    <div class="ui inverted segment">
+      <div class="ui inverted progress success">
+        <div class="bar" id="happy">
+          <div class="progress"></div>
+        </div>
+        <div class="label">행복도</div>
+      </div>
+      <div class="ui inverted progress warning">
+        <div class="bar" id="satiety">
+          <div class="progress"></div>
+        </div>
+        <div class="label">포만감</div>
+      </div>
+      <div class="ui inverted progress error">
+        <div class="bar" id="clean">
+          <div class="progress"></div>
+        </div>
+        <div class="label">깨끗함</div>
+      </div>
+    </div>
     <div class="playground">
       <img class="deer" src="./images/snow.svg" alt="">
     </div>
-    <div class="ui inverted segment">
-  <div class="ui inverted progress success">
-    <div class="bar" id="happy">
-      <div class="progress"></div>
-    </div>
-    <div class="label">행복도</div>
-  </div>
-  <div class="ui inverted progress warning">
-    <div class="bar" id="satiety">
-      <div class="progress"></div>
-    </div>
-    <div class="label">포만감</div>
-  </div>
-  <div class="ui inverted progress error">
-    <div class="bar" id="clean">
-      <div class="progress"></div>
-    </div>
-    <div class="label">깨끗함</div>
-  </div>
-</div>
-<div class="buttons">
-<button class="ui green basic button">재우기</button>
-<button class="ui yellow basic button">밥주기</button>
-  <button class="ui red basic button">치우기</button>
+    <div class="buttons">
+      <button class="ui green basic button" id="sleep">재우기</button>
+      <button class="ui yellow basic button">밥주기</button>
+      <button class="ui red basic button">치우기</button>
 </div>
     <script
     src="https://code.jquery.com/jquery-3.1.1.min.js"
@@ -42,6 +42,7 @@
     </script>
     <script src="./Semantic-UI-CSS-master/semantic.min.js"></script>
     <script src="tab.js"></script>
-    <script src="./Character.js"></script>  
+    <script src="./Character.js"></script>
+    <script src="./sleep.js"></script>  
   </body>
   </html>
