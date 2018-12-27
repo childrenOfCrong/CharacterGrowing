@@ -43,7 +43,7 @@ const Character = class {
     console.log('created');
   }
   eat(){
-    console.log('created');
+    console.log('eat');
   }
   sleep(){
   console.log('created');
@@ -57,6 +57,9 @@ const Character = class {
      this.timerIDList.push(poopTimerID)
    }, 10000) 
   }
+  makeShit(){
+    
+  }
   decreasClean(){
     this.clean -=50;
    const cleanEl = document.querySelector('#clean')
@@ -69,10 +72,15 @@ const Character = class {
   }
 }
 
+const eatBtn = document.querySelector('#eat')
 
-console.dir(window)
-console.log(window.$_created)
+
+
+
 window.addEventListener('load', ()=>{
   const deer = new Character();
+  eatBtn.addEventListener('click', ()=>deer.eat())
 })
+
+
 
