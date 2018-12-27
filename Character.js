@@ -79,7 +79,7 @@ const eatBtn = document.querySelector('#eat')
 
 window.addEventListener('load', ()=>{
   const deer = new Character();
-  eatBtn.addEventListener('click', ()=>deer.eat())
+  eatBtn.addEventListener('click', ()=>deer.eat());
 })
 
 
