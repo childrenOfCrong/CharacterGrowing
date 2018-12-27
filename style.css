@@ -44,6 +44,12 @@ body {
 .progress {
     height: 1rem;
 }
+.shit{
+    width: 3rem;
+    position: absolute;
+    bottom: 5.5rem;
+    right: 4.5rem;
+}
 
 .buttons {
     position: absolute;
