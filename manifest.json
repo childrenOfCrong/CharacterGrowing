@@ -11,10 +11,6 @@
     "chrome_url_overrides": {
     "newtab": "default.html"
     },
-    "permissions": [
-        "activeTab",
-        "<all_urls>"
-    ],
     "content_scripts": [
         {
             "matches": ["http://127.0.0.1:5500/*"],

@@ -57,6 +57,9 @@ const Character = class {
      this.timerIDList.push(poopTimerID)
    }, 10000) 
   }
+  makeShit(){
+    
+  }
   decreasClean(){
     this.clean -=50;
    const cleanEl = document.querySelector('#clean')
