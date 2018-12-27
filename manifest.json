@@ -14,5 +14,15 @@
     "content_security_policy":"script-src 'self' https://code.jquery.com; object-src 'self'",
     "chrome_url_overrides": {
     "newtab": "default.html"
-    }
+    },
+    "permissions": [
+        "activeTab",
+        "<all_urls>"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["http://127.0.0.1:5500/*"],
+            "js": ["default.js"]
+        }
+    ]
 }

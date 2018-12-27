@@ -1,20 +1,14 @@
-
 function click(e) {
-    console.log("start");
     chrome.tabs.executeScript(null,
-        {
-            code:"document.body.style.backgroundColor='" + e.target.id + "'"
-        }
-    );
-    
+        {code:`document.body.style.backgroundColor= 'black'`});
     window.close();
-}
-
-document.addEventListener('DOMContentLoaded', function () {
+  }
+  
+  document.addEventListener('DOMContentLoaded', function () {
     var divs = document.querySelectorAll('div');
     for (var i = 0; i < divs.length; i++) {
-        divs[i].addEventListener('click', click);
+      divs[i].addEventListener('click', click);
     }
-});
+  });
 
 // $('.tabular.menu .item').tab();
