@@ -1,18 +1,15 @@
 {
     "name": "Hello Extensions",
     "description" : "Base Level Extension",
-    "permissions": ["storage"],
+    "permissions": ["storage",  "activeTab", "tabs"],
     "version": "1.0",
     "manifest_version": 2,
     "browser_action": {
       "default_popup": "newtab.html"
-    },
-    "background": {
-        "scripts": ["background.js"],
-        "persistent": false
-    },
+    },  
     "content_security_policy":"script-src 'self' https://code.jquery.com; object-src 'self'",
     "chrome_url_overrides": {
     "newtab": "default.html"
-    }
+    },
+    "homepage_url": "default.html"
 }
