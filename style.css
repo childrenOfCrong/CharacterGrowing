@@ -66,4 +66,7 @@ body {
 
 .bob {
   width: 80px;
+  position: absolute;
+  bottom: 4rem;
+  margin-left: 2rem;
 }
