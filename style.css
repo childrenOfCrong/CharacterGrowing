@@ -83,3 +83,12 @@ body {
   bottom: 4rem;
   margin-left: 2rem;
 }
+.gameover{
+    width: 20rem;
+    height: 25rem;
+    font-size: 3rem;
+    color: #fff;
+    background-color: #000;
+    line-height: 25rem;
+    text-align: center;
+}
