@@ -1,0 +1,130 @@
+body, html {
+   margin: 0;
+   height: 100%;
+}
+ul {
+  padding-left: 0;
+}
+li {
+  list-style: none;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  background:#FBEAF2;
+}
+
+.backgroundImg {
+  width: 100%;
+  background-image: url("../images/bg05.png");
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-position: center top; */
+}
+
+.lastBg {
+  background-position: center top;
+  background-size: contain;
+}
+
+
+.snow {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background:
+    url("https://bit.ly/2T5aYUO"),
+    url("https://bit.ly/2EMU0H5");
+  animation: snowFall 15s linear infinite;
+  z-index: 5;
+}
+
+@keyframes snowFall {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: 500px 1000px, 400px 400px, 300px;
+  }
+}
+
+
+.table {
+	display: flex;
+	width: 100%;
+	height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 1000;
+}
+
+.table__cell {
+	position: relative;
+	display: flex;
+  height: 100%;
+	width: 20%;
+	align-items: center;
+	justify-content: center;
+	transition: all 500ms cubic-bezier(0.4, 0.0, 0.2, 1);
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  cursor: pointer;
+}
+.table__cell:nth-child(1) {
+ background-image: url('../images//bg01.jpg');
+ 
+}
+.table__cell:nth-child(2) {
+  background-image: url('../images//bg02.png');
+}
+.table__cell:nth-child(3) {
+  background-image: url('../images//bg03.png');
+}
+.table__cell:nth-child(4) {
+  background-image: url('../images//bg04.jpg');
+}
+.table__cell:nth-child(5) {
+  background-image: url('../images//bg05.png');
+  background-position: 50% 0%;
+}
+
+.table__cell:hover {
+ 	width: 50%;
+}  
+.table__cell span {
+    opacity: 0;
+		transition: opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1);
+		transition-delay: 0;
+}
+.table__cell span:hover {
+  	opacity: 1;
+		transition-delay: 300ms;
+}
+
+
+.hide {
+  opacity: 0;
+}
+
+.show {
+  opacity: 1;
+}
+
+.none {
+  display: none;
+}
+
+.deer {
+  width: 120px;
+  position: absolute;
+  bottom: 30px;
+}
+

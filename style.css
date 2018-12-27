@@ -1,15 +1,94 @@
+html {
+    font-size: 16px;
+}
 body {
     overflow: hidden;
     margin: 0px;
     padding: 0px;
+    padding-top: 1rem;
     background: white;
-    width: 4rem;
+    width: 15rem;
+    height: 25rem;
 }
-.test{
-    height: 4rem;
+.playground{
+    position: relative;
+    height: 80%;
 }
-#go{
-    height: 2rem;
-    cursor: pointer;
+.deer {
+    bottom: 3rem;
+    position: absolute;
+    width: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.ui.inverted.segment {
+    width: 100%;
+    padding: 0;
+    font-size: 0;
+    display: flex;
+    background: none;
+}
+.ui.inverted.progress {
+    flex: 1;
+    margin: 0;
+    margin-right: 5px;
+    background: #bbb;
+    /* display: inline-block; */
+}
+.ui.inverted.progress .bar {
+    flex: 1;
+    height: 1rem;
+    min-width: unset;
+    width: 100%;
+}
+.progress {
+    height: 1rem;
+}
+.shit{
+    width: 3rem;
+    position: absolute;
+    bottom: 5.5rem;
+    right: 4.5rem;
+}
+
+.buttons {
+    position: absolute;
+    width: 100%;
+    bottom: 0.5rem;
+    display: flex;
+    justify-content: center;
+}
+.buttons .ui.basic.button {
+    width: 5rem;
+    padding: 10px;
+    text-align: center;
+}
+
+.playgroundCopy {
+    width : 320px;
+    height :295px;
+    position: absolute;
+    top: 60px;
+    transition: all 1.5s;
+}
+
+.sleep {
+    background: #000;
+    opacity: 0.9;    
+}
+
+.bob {
+  width: 80px;
+  position: absolute;
+  bottom: 4rem;
+  margin-left: 2rem;
+}
+.gameover{
+    width: 20rem;
+    height: 25rem;
+    font-size: 3rem;
+    color: #fff;
+    background-color: #000;
+    line-height: 25rem;
     text-align: center;
 }
