@@ -7,58 +7,34 @@
     <link rel="stylesheet" href="./style.css">
   </head>
   <body>
-    <div class="ui top attached tabular menu">
-      <a class="item active" data-tab="first">캐릭터 고르기</a>
-      <a class="item" data-tab="second">상태창</a>
+    <div class="playground">
+      <img class="deer" src="./images/snow.svg" alt="">
     </div>
-    <div class="ui bottom attached tab segment active" id="first" data-tab="first">
-        <div class="image_wrapper">
-          <img src="./images/snow.svg" alt="">
-          <img src="./images/snow.svg" alt="">
-          <img src="./images/snow.svg" alt="">
-        </div>
-        <div class="ui input name_wrapper">
-            <label class="ui label name">이름</label>
-            <input type="text" placeholder="Search...">
-          </div>
-          <div>
-            <button id="choseCharacter"class="ui button">선택</button>
-          </div>
+    <div class="ui inverted segment">
+  <div class="ui inverted progress success">
+    <div class="bar">
+      <div class="progress"></div>
     </div>
-    <div class="ui bottom attached tab segment" data-tab="second">
-      <div>
-        <div>밥 먹이기</div>
-        <div>재우기</div>
-        <div>청소&목욕하기</div>
-      </div>
-      <div class="ui inverted segment">
-          <div class="ui inverted progress">
-            <div class="bar">
-              <div class="progress"></div>
-            </div>
-            <div class="label">Uploading Files</div>
-          </div>
-          <div class="ui inverted progress success">
-            <div class="bar">
-              <div class="progress"></div>
-            </div>
-            <div class="label">Success</div>
-          </div>
-          <div class="ui inverted progress warning">
-            <div class="bar">
-              <div class="progress"></div>
-            </div>
-            <div class="label">Warning</div>
-          </div>
-          <div class="ui inverted progress error">
-            <div class="bar">
-              <div class="progress"></div>
-            </div>
-            <div class="label">Error</div>
-          </div>
-        </div>
+    <div class="label">피로감</div>
+  </div>
+  <div class="ui inverted progress warning">
+    <div class="bar">
+      <div class="progress"></div>
     </div>
-    
+    <div class="label">배고픔</div>
+  </div>
+  <div class="ui inverted progress error">
+    <div class="bar">
+      <div class="progress"></div>
+    </div>
+    <div class="label">더러움</div>
+  </div>
+</div>
+<div class="buttons">
+<button class="ui green basic button">재우기</button>
+<button class="ui yellow basic button">밥주기</button>
+  <button class="ui red basic button">치우기</button>
+</div>
     <script
     src="https://code.jquery.com/jquery-3.1.1.min.js"
     integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
