@@ -46,7 +46,13 @@ const Character = class {
     console.log('eat');
   }
   sleep(){
-  console.log('created');
+    playgroundCopy.classList.add("sleep");
+
+    setTimeout(()=>{
+      this.happy = 100;
+      happyEl.style.width = `${this.happy}%`;
+      playgroundCopy.classList.remove("sleep");
+    }, 2000); 
   }
   poop(){
     const poopTimerID = setInterval(()=>{
@@ -73,14 +79,13 @@ const Character = class {
 }
 
 const eatBtn = document.querySelector('#eat')
-
-
-
+const sleepBtn = document.querySelector("#sleep");
+const playgroundCopy = document.querySelector(".playgroundCopy");
+const happyEl = document.querySelector('#happy');
 
 window.addEventListener('load', ()=>{
   const deer = new Character();
-  eatBtn.addEventListener('click', ()=>deer.eat())
-})
+  eatBtn.addEventListener('click', ()=>deer.eat());
 
-
-
+  sleepBtn.addEventListener("click", () => deer.sleep());
+});
