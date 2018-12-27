@@ -49,7 +49,7 @@ const Character = class {
     bob.setAttribute('src', './images/eat.png')
     bob.setAttribute('class', 'bob')
     document.body.appendChild(bob)
-    bob.style.right = `${Math.random()*100}%`;
+    bob.style.right = `${Math.random()*10}rem`;
     this.eating(bob)
   }
   setFullSeti(){
@@ -62,7 +62,7 @@ const Character = class {
     let opacity = 1;
     const eatingBob = ()=>{
       bob.style.opacity = opacity;
-      opacity -=0.003;
+      opacity -=0.03;
       if(opacity>0){
         requestAnimationFrame(eatingBob);
       }
@@ -113,7 +113,7 @@ const Character = class {
       let opacity = 1;
       const cleaningShit = ()=>{
         shit.style.opacity = opacity;
-        opacity -=0.01;
+        opacity -=0.1;
         if(opacity>0){
           requestAnimationFrame(cleaningShit);
         }
@@ -128,18 +128,27 @@ const Character = class {
   }
   die(){
     this.timerIDList.forEach(timerId=>clearInterval(timerId))
-    console.log('die')
+    document.querySelector('html').innerHTML = "Game over";
+    document.querySelector('html').style.fontSize = "3rem";
+    document.querySelector('html').style.fontWeight = "bold";
+    document.querySelector('html').style.color = "#fff";
+    document.querySelector('html').style.backgroundColor = "#000";
+    document.querySelector('html').style.width = "20rem";
+    document.querySelector('html').style.height = "25rem";
+    document.querySelector('html').style.lineHeight = "25rem";
+    document.querySelector('html').style.textAlign = "center";
+
   }
 
 }
 
 const eatBtn = document.querySelector('#eat')
-
+const playgroundCopy = document.querySelector(".playgroundCopy");
+const happyEl = document.querySelector('#happy');
 window.addEventListener('load', ()=>{
   const deer = new Character();
   const sleepBtn = document.querySelector("#sleep");
-  const playgroundCopy = document.querySelector(".playgroundCopy");
-  const happyEl = document.querySelector('#happy');
+  
   eatBtn.addEventListener('click', ()=>deer.eat())
   const Broom = document.querySelector('#cleanSheet');
   Broom.addEventListener('click', () => {
