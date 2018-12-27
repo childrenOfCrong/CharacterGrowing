@@ -48,6 +48,7 @@ const Character = class {
     bob.setAttribute('src', './images/eat.png')
     bob.setAttribute('class', 'bob')
     document.body.appendChild(bob)
+    bob.style.right = `${Math.random()*100}%`;
     this.eating(bob)
   }
   setFullSeti(){
@@ -69,7 +70,7 @@ const Character = class {
     eatingBob();
   }
   sleep(){
-  console.log('created');
+    console.log('created');
   }
   poop(){
     const cleanSheet = document.querySelector('#cleanSheet');
