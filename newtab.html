@@ -1,12 +1,71 @@
 <!doctype html>
 <html>
   <head>
+    <meta charset="UTF-8">
     <title>Set Page Color Popup</title>
+    <link rel="stylesheet" href="./Semantic-UI-CSS-master/semantic.min.css">
     <link rel="stylesheet" href="./style.css">
   </head>
   <body>
-    <div class="test">test</div>
-    <div id="go">start</div>
-    <img src="./images/snow.svg" alt="Breaking Borders Logo" height="65" width="68">
+    <div class="ui top attached tabular menu">
+      <a class="item active" data-tab="first">캐릭터 고르기</a>
+      <a class="item" data-tab="second">상태창</a>
+    </div>
+    <div class="ui bottom attached tab segment active" id="first" data-tab="first">
+        <div class="image_wrapper">
+          <img src="./images/snow.svg" alt="">
+          <img src="./images/snow.svg" alt="">
+          <img src="./images/snow.svg" alt="">
+        </div>
+        <div class="ui input name_wrapper">
+            <label class="ui label name">이름</label>
+            <input type="text" placeholder="Search...">
+          </div>
+          <div>
+            <button class="ui button">선택</button>
+          </div>
+    </div>
+    <div class="ui bottom attached tab segment" data-tab="second">
+      <div>
+        <div>밥 먹이기</div>
+        <div>재우기</div>
+        <div>청소&목욕하기</div>
+      </div>
+      <div class="ui inverted segment">
+          <div class="ui inverted progress">
+            <div class="bar">
+              <div class="progress"></div>
+            </div>
+            <div class="label">Uploading Files</div>
+          </div>
+          <div class="ui inverted progress success">
+            <div class="bar">
+              <div class="progress"></div>
+            </div>
+            <div class="label">Success</div>
+          </div>
+          <div class="ui inverted progress warning">
+            <div class="bar">
+              <div class="progress"></div>
+            </div>
+            <div class="label">Warning</div>
+          </div>
+          <div class="ui inverted progress error">
+            <div class="bar">
+              <div class="progress"></div>
+            </div>
+            <div class="label">Error</div>
+          </div>
+        </div>
+    </div>
+    
+    <script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous">
+    </script>
+    <script src="./Semantic-UI-CSS-master/semantic.min.js"></script>
+    <script src="tab.js"></script>
+      
   </body>
-</html>
+  </html>
