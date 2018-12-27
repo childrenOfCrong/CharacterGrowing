@@ -44,6 +44,30 @@ const Character = class {
   }
   eat(){
     console.log('eat');
+    const bob = document.createElement('img')
+    bob.setAttribute('src', './images/eat.png')
+    bob.setAttribute('class', 'bob')
+    document.body.appendChild(bob)
+    bob.style.right = `${Math.random()*100}%`;
+    this.eating(bob)
+  }
+  setFullSeti(){
+    console.log('full')
+    this.satiety = 100;
+     const satisEl = document.querySelector('#satiety');
+      satisEl.style.width = `${this.satiety}%`;
+  }
+  eating(bob){
+    let opacity = 1;
+    const eatingBob = ()=>{
+     bob.style.opacity = opacity;
+     opacity -=0.003;
+      if(opacity>0){
+        requestAnimationFrame(eatingBob);
+      }
+      else this.setFullSeti();
+    }
+    eatingBob();
   }
   sleep(){
     playgroundCopy.classList.add("sleep");
@@ -55,22 +79,26 @@ const Character = class {
     }, 2000); 
   }
   poop(){
+    const cleanSheet = document.querySelector('#cleanSheet');
     const poopTimerID = setInterval(()=>{
-      const shit = document.createElement('img')
-      shit.setAttribute('src', '')
-     document.body.appendChild(shit)
-     this.decreasClean()
-     this.timerIDList.push(poopTimerID)
-   }, 10000) 
+      this.makeShit();
+      this.decreaseClean();
+      this.timerIDList.push(poopTimerID);
+    }, 5000) 
   }
   makeShit(){
-    
+    const shit = document.createElement('img');
+    const right = Math.random() * 6 - 2;
+    shit.setAttribute('src', './images/shit.png');
+    shit.setAttribute('class', 'shit');
+    shit.setAttribute('style', `right: ${right}rem`);
+    document.body.appendChild(shit);
   }
-  decreasClean(){
+  decreaseClean(){
     this.clean -=50;
-   const cleanEl = document.querySelector('#clean')
-   cleanEl.style.width = `${this.clean}%`;
-     if(this.clean<=0)this.die()
+    const cleanEl = document.querySelector('#clean')
+    cleanEl.style.width = `${this.clean}%`;
+    if(this.clean<=0)this.die()
   }
   die(){
     this.timerIDList.forEach(timerId=>clearInterval(timerId))
