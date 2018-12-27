@@ -11,4 +11,6 @@ function click(e) {
     }
   });
 
+
+
 // $('.tabular.menu .item').tab();
