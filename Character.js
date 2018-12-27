@@ -49,6 +49,7 @@ const Character = class {
     bob.setAttribute('src', './images/eat.png')
     bob.setAttribute('class', 'bob')
     document.body.appendChild(bob)
+    bob.style.right = `${Math.random()*100}%`;
     this.eating(bob)
   }
   setFullSeti(){
@@ -71,6 +72,13 @@ const Character = class {
   }
   sleep(){
     console.log('created');
+    playgroundCopy.classList.add("sleep");
+
+    setTimeout(()=>{
+      this.happy = 100;
+      happyEl.style.width = `${this.happy}%`;
+      playgroundCopy.classList.remove("sleep");
+    }, 2000); 
   }
   poop(){
     const cleanSheet = document.querySelector('#cleanSheet');
@@ -129,6 +137,9 @@ const eatBtn = document.querySelector('#eat')
 
 window.addEventListener('load', ()=>{
   const deer = new Character();
+  const sleepBtn = document.querySelector("#sleep");
+  const playgroundCopy = document.querySelector(".playgroundCopy");
+  const happyEl = document.querySelector('#happy');
   eatBtn.addEventListener('click', ()=>deer.eat())
   const Broom = document.querySelector('#cleanSheet');
   Broom.addEventListener('click', () => {
@@ -136,7 +147,7 @@ window.addEventListener('load', ()=>{
     let html = document.querySelector('html')
     html.style.cursor = "url('./images/cursor.cur'), auto"
   })
-})
-
-
+  sleepBtn.addEventListener("click", () => deer.sleep());
+  
+});
 
