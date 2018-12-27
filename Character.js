@@ -58,7 +58,7 @@ const Character = class {
   }
   makeShit(){
     const shit = document.createElement('img');
-    const right = Math.random() * 6 - 1;
+    const right = Math.random() * 6 - 2;
     shit.setAttribute('src', './images/shit.png');
     shit.setAttribute('class', 'shit');
     shit.setAttribute('style', `right: ${right}rem`);
